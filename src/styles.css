@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+  box-sizing: border-box;
+  max-width: 790px;
+  margin: 50px auto;
+  padding: 20px;
+
+  border: 1px solid lightgrey;
+}

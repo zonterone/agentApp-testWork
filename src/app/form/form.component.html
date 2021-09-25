@@ -1,0 +1,20 @@
+<div *ngIf="dist.errors && dist.dirty || age.errors && age.dirty || weight.errors && weight.dirty">Необходимо заполнить все поля</div>
+
+<form (ngSubmit)="onSubmit()">
+
+  <label for="distance"> Количество километров
+    <input required type="number" [(ngModel)]="calculateService.distance" name="distance" id="distance" #dist="ngModel">
+  </label>
+
+
+  <label for="age"> Возраст
+    <input required type="number" [(ngModel)]="calculateService.age" name="age" id="age" #age="ngModel">
+  </label>
+
+  <label for="weight"> Вес багажа
+    <input required type="number" [(ngModel)]="calculateService.weight" name="weight" id="weight" #weight="ngModel">
+  </label>
+
+  <button type="submit" [disabled]="dist.errors || age.errors || weight.errors">Рассчитать</button>
+
+</form>

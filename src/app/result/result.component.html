@@ -1,0 +1,39 @@
+<h2>Предложения:</h2>
+<table>
+  <tr>
+    <th>Аэрофлот:</th>
+  </tr>
+  <tr [hidden]="calculateService.aeroflotPrice.economy === undefined  || calculateService.aeroflotPrice.economy <= 0"  >
+    <td>
+      Эконом: <span> {{calculateService.aeroflotPrice.economy}} &#8381;</span>
+    </td>
+  </tr>
+  <tr [hidden]="calculateService.aeroflotPrice.advanced === undefined  || calculateService.aeroflotPrice.advanced <= 0">
+    <td>
+      Продвинутый: <span> {{calculateService.aeroflotPrice.advanced}} &#8381;</span>
+    </td>
+  </tr>
+  <tr [hidden]="calculateService.aeroflotPrice.lux === undefined  || calculateService.aeroflotPrice.lux <= 0">
+    <td>
+      Люкс: <span> {{calculateService.aeroflotPrice.lux}} &#8381;</span>
+    </td>
+  </tr>
+  <tr>
+    <th>РЖД: </th>
+  </tr>
+  <tr [hidden]="calculateService.rzhdPrice.economy === undefined  || calculateService.rzhdPrice.economy <= 0">
+    <td >
+      Эконом: <span> {{calculateService.rzhdPrice.economy}} &#8381;</span>
+    </td>
+  </tr>
+  <tr [hidden]="calculateService.rzhdPrice.advanced === undefined  || calculateService.rzhdPrice.advanced <= 0">
+    <td>
+      Продвинутый: <span> {{calculateService.rzhdPrice.advanced}} &#8381;</span>
+    </td>
+  </tr>
+  <tr [hidden]="calculateService.rzhdPrice.lux === undefined  || calculateService.rzhdPrice.lux <= 0">
+    <td>
+      Люкс: <span> {{calculateService.rzhdPrice.lux}} &#8381;</span>
+    </td>
+  </tr>
+</table>
